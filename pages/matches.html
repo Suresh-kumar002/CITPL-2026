@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matches & Scorecards - CITPL 2026</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css?v=20261010">
+</head>
+
+<body class="citpl-app">
+    <!-- Top Bar -->
+    <div class="top-bar d-none d-lg-block">
+        <div class="container-fluid d-flex justify-content-between align-items-center px-4">
+            <div class="d-flex align-items-center gap-2">
+                <button onclick="window.history.length > 1 ? window.history.back() : window.location.href='../index.html'" class="btn btn-sm btn-outline-light rounded-pill px-3 fw-bold me-2">
+                    <i class="fas fa-arrow-left me-1"></i> Back
+                </button>
+                <span><i class="fas fa-phone"></i> 9887464209 &nbsp;&nbsp; <i class="fas fa-envelope"></i> citpl@cit.ac.in</span>
+            </div>
+            <div><a href="../index.html">Home</a></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2 sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../assets/citpl-logo.png" alt="CITPL Logo" class="cit-logo">
+                <div>
+                    <div class="institute-title">सीआईटी प्रीमियर लीग 2026</div>
+                    <div class="institute-subtitle">Matches & Schedule</div>
+                </div>
+            </a>
+            <div class="ms-auto">
+                <a href="live.html" class="btn btn-danger btn-sm rounded-pill fw-bold"><span class="live-pulse me-1"></span> Live Match</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Banner -->
+    <div class="bg-primary text-white py-4">
+        <div class="container px-4 text-center">
+            <h2 class="fw-bold mb-1"><i class="fas fa-calendar-alt me-2"></i> Tournament Match Schedule & Scorecards</h2>
+            <p class="mb-0 text-light">Official CIT Premier League 2026 Fixtures</p>
+        </div>
+    </div>
+
+    <!-- Matches List -->
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Match 1: LIVE -->
+            <div class="col-lg-6">
+                <div class="card shadow border-danger border-2 rounded-4 p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="badge bg-danger rounded-pill px-3 py-2"><span class="live-pulse me-1"></span> MATCH #05 • LIVE</span>
+                        <small class="text-muted"><i class="far fa-clock me-1"></i> Today, 4:30 PM</small>
+                    </div>
+                    <div class="row align-items-center text-center">
+                        <div class="col-5">
+                            <h4 class="fw-bold text-primary mb-1">CIT Warriors</h4>
+                            <div class="display-6 fw-bold text-dark">87/4</div>
+                            <small class="text-muted">(9.2 Overs)</small>
+                        </div>
+                        <div class="col-2 fw-bold text-muted fs-5">VS</div>
+                        <div class="col-5">
+                            <h4 class="fw-bold text-secondary mb-1">Tech Titans</h4>
+                            <div class="display-6 fw-bold text-dark">120/6</div>
+                            <small class="text-muted">(10.0 Overs)</small>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3 pt-3 border-top">
+                        <span class="text-danger fw-bold me-3">CIT Warriors need 34 runs in 4 balls</span>
+                        <a href="live.html" class="btn btn-outline-danger btn-sm rounded-pill"><i class="fas fa-eye me-1"></i> View Live Scorecard</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Match 2: COMPLETED -->
+            <div class="col-lg-6">
+                <div class="card shadow-sm border-0 rounded-4 p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="badge bg-success rounded-pill px-3 py-2">MATCH #04 • COMPLETED</span>
+                        <small class="text-muted"><i class="far fa-clock me-1"></i> Yesterday</small>
+                    </div>
+                    <div class="row align-items-center text-center">
+                        <div class="col-5">
+                            <h4 class="fw-bold text-primary mb-1">Cyber Strikers</h4>
+                            <div class="display-6 fw-bold text-dark">142/3</div>
+                            <small class="text-muted">(10.0 Overs)</small>
+                        </div>
+                        <div class="col-2 fw-bold text-muted fs-5">VS</div>
+                        <div class="col-5">
+                            <h4 class="fw-bold text-secondary mb-1">Royals Abu Road</h4>
+                            <div class="display-6 fw-bold text-dark">98/8</div>
+                            <small class="text-muted">(10.0 Overs)</small>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3 pt-3 border-top">
+                        <span class="text-success fw-bold me-3">Cyber Strikers won by 44 runs</span>
+                        <button class="btn btn-outline-primary btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#scorecardModal"><i class="fas fa-file-alt me-1"></i> Full Scorecard</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scorecard Modal -->
+    <div class="modal fade" id="scorecardModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold">Match #04 Scorecard Summary</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <h6 class="fw-bold text-primary mb-3">Cyber Strikers Batting (142/3)</h6>
+                    <table class="table table-sm align-middle mb-4">
+                        <thead><tr><th>Batter</th><th>Runs</th><th>Balls</th><th>4s</th><th>6s</th><th>SR</th></tr></thead>
+                        <tbody>
+                            <tr><td>Karan Patel</td><td>65</td><td>31</td><td>6</td><td>4</td><td>209.67</td></tr>
+                            <tr><td>Pooja Chaudhary</td><td>42</td><td>22</td><td>4</td><td>2</td><td>190.90</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/app-shell.js"></script>
+</body>
+
+</html>
